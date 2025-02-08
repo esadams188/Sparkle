@@ -1,0 +1,728 @@
+/* Base Styles */
+body {
+    background-color: #f0e6ff;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    color: #333;
+}
+
+/* Container Styles */
+.container {
+    background-color: #fff5f5;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* List Group Styles */
+.list-group-item {
+    background-color: #ffe6f0;
+    border: 2px solid #ff9ccc;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    transform: scale(1.05);
+    background-color: #ffccee;
+    box-shadow: 0 5px 15px rgba(255, 100, 200, 0.2);
+}
+
+/* Card Styles */
+.card {
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 3px dashed #ff69b4;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Input Styles */
+#post-content {
+    resize: none;
+    border-radius: 15px;
+    border: 2px dotted #ff1493;
+    background-color: #fff0f5;
+}
+
+/* Post Button Styles */
+#post-button {
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#post-button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #fff5f5;
+    border-bottom: 3px dashed #ff69b4;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.navbar-brand-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff69b4 !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    border: 2px dashed transparent;
+    white-space: nowrap;
+}
+
+.navbar-brand:hover {
+    border-color: #ff69b4;
+    transform: scale(1.05);
+}
+
+.brand-emoji {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .brand-emoji {
+    transform: rotate(360deg);
+}
+
+.navbar-nav .nav-link {
+    color: #ff69b4 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #ffebf3;
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 0.5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991.98px) {
+    .navbar-brand-container {
+        position: relative;
+        left: 0;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .navbar-nav {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Icon Styles */
+.list-group-item i, .navbar-nav .nav-link i {
+    color: #ff69b4;
+    margin-right: 10px;
+}
+
+/* Post Animation */
+@keyframes postFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.post-animation {
+    animation: postFadeIn 0.5s ease-out;
+}
+
+/* Magic Button Animation */
+@keyframes magicSparkle {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(10deg); }
+    100% { transform: scale(1) rotate(-10deg); }
+}
+
+.btn-magic-animation {
+    animation: magicSparkle 0.5s ease-in-out;
+    background-color: #ff1493 !important;
+}
+
+/* Error Message Styles */
+#error-container .alert {
+    border-radius: 15px;
+    background-color: #ffebee;
+    border: 2px solid #ff5252;
+    color: #d32f2f;
+    transition: all 0.3s ease;
+}
+
+#error-container .alert .btn-close {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(0deg);
+}
+
+/* Editor Toolbar Styles */
+.editor-toolbar {
+    background-color: #fff5f5;
+    border: 2px dashed #ff69b4;
+    border-radius: 15px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.editor-toolbar button {
+    border-color: #ff69b4;
+    color: #ff69b4;
+    transition: all 0.3s ease;
+}
+
+.editor-toolbar button:hover {
+    background-color: #ff69b4;
+    color: white;
+    transform: scale(1.1);
+}
+
+.editor-toolbar button.active {
+    background-color: #ff69b4;
+    color: white;
+}
+
+/* GIF Grid Styles */
+.gif-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.gif-item {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gif-item:hover {
+    transform: scale(1.05);
+}
+
+.gif-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ff69b4;
+}
+
+/* Selected GIF Preview */
+.selected-media {
+    position: relative;
+    margin: 10px 0;
+}
+
+.selected-media img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px dashed #ff69b4;
+}
+
+.remove-media {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-media:hover {
+    transform: scale(1.1);
+    background-color: #ff1493;
+}
+
+/* Emoji Picker Styles */
+.emoji-picker {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 2px dashed #ff69b4;
+    border-radius: 15px;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.emoji-picker.d-none {
+    display: none !important;
+}
+
+.emoji-picker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px dashed #ff69b4;
+    cursor: move;
+}
+
+.emoji-picker-title {
+    color: #ff69b4;
+    font-weight: bold;
+    margin: 0;
+    user-select: none;
+}
+
+.emoji-picker-close {
+    background: none;
+    border: none;
+    color: #ff69b4;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    transition: transform 0.3s ease;
+}
+
+.emoji-picker-close:hover {
+    transform: scale(1.2);
+}
+
+.emoji-search {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 2px dashed #ff69b4;
+    border-radius: 10px;
+    width: 100%;
+    color: #ff69b4;
+}
+
+.emoji-search:focus {
+    outline: none;
+    border-color: #ff1493;
+}
+
+.emoji-categories {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px dashed #ff69b4;
+    overflow-x: auto;
+}
+
+.emoji-category {
+    background: none;
+    border: 2px dashed transparent;
+    border-radius: 8px;
+    padding: 0.3rem 0.6rem;
+    color: #ff69b4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.emoji-category:hover,
+.emoji-category.active {
+    border-color: #ff69b4;
+    background-color: #ffebf3;
+}
+
+.emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.emoji-item {
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.emoji-item:hover {
+    background-color: #ffebf3;
+    transform: scale(1.2);
+}
+
+.resize-handle {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    cursor: se-resize;
+    color: #ff69b4;
+    transform: rotate(90deg);
+    user-select: none;
+}
+
+/* Initial position for the emoji picker */
+.emoji-picker:not(.d-none) {
+    animation: showEmojiPicker 0.3s ease;
+}
+
+@keyframes showEmojiPicker {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Post Preview Styles */
+.post-preview {
+    background-color: #fff5f5;
+    border: 2px dashed #ff69b4 !important;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* Modal Styles */
+.modal-content {
+    border: 3px dashed #ff69b4;
+    border-radius: 20px;
+    background-color: #fff5f5;
+}
+
+.modal-header {
+    border-bottom: 2px dashed #ff69b4;
+    background-color: #ffe4e1;
+    border-radius: 17px 17px 0 0;
+}
+
+.modal-title {
+    color: #ff1493;
+    font-weight: bold;
+}
+
+#gif-search {
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    background-color: #fff5f5;
+    border: 2px dashed #ff69b4;
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+.dropdown-menu-animated {
+    animation: dropdownFade 0.2s ease;
+    transform-origin: top center;
+    border: 2px dashed #ff69b4;
+    background-color: #fff5f5;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-item {
+    color: #ff69b4;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin: 0.2rem 0;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item i {
+    margin-right: 0.5rem;
+    font-size: 1.1em;
+}
+
+.dropdown-item:hover {
+    background-color: #ffebf3;
+    color: #ff1493;
+    transform: scale(1.05);
+}
+
+.dropdown-divider {
+    border-top: 1px dashed #ff69b4;
+    margin: 0.5rem 0;
+    opacity: 0.5;
+}
+
+/* Show dropdown on hover for desktop */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Ensure dropdowns don't go off-screen on mobile */
+@media (max-width: 991.98px) {
+    .dropdown-menu {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-item {
+        padding: 0.5rem 1.5rem;
+        color: #ff69b4;
+    }
+
+    .dropdown-divider {
+        margin: 0.25rem 0;
+    }
+}
+
+/* Scrollbar Styles for Emoji Picker */
+.emoji-content::-webkit-scrollbar,
+.emoji-categories::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.emoji-content::-webkit-scrollbar-track,
+.emoji-categories::-webkit-scrollbar-track {
+    background: #fff5f5;
+    border-radius: 10px;
+}
+
+.emoji-content::-webkit-scrollbar-thumb,
+.emoji-categories::-webkit-scrollbar-thumb {
+    background: #ff69b4;
+    border-radius: 10px;
+}
+
+.emoji-content::-webkit-scrollbar-thumb:hover,
+.emoji-categories::-webkit-scrollbar-thumb:hover {
+    background: #ff1493;
+}
+
+/* Dragging styles */
+.emoji-picker.dragging {
+    opacity: 0.8;
+    cursor: move;
+}
+
+.emoji-picker.resizing {
+    transition: none;
+}
+
+/* Profile Page Styles */
+.profile-card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.profile-cover {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cover-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile-avatar {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid white;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-stats {
+    color: #6c757d;
+}
+
+.profile-stats div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-stats strong {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-tabs .nav-link {
+    color: #6c757d;
+}
+
+.nav-tabs .nav-link.active {
+    color: #ff1493;
+    border-color: #ff1493;
+}
+
+.tab-content {
+    background-color: white;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px;
+}
+
+/* Auth Pages Styles */
+.auth-page {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    min-height: 100vh;
+}
+
+.auth-card {
+    border: 3px dashed #ff1493;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.2);
+    transition: all 0.3s ease;
+}
+
+.auth-card:hover {
+    border-color: #ff69b4;
+    transform: scale(1.02);
+    box-shadow: 0 15px 25px rgba(255, 105, 180, 0.3);
+}
+
+.auth-card .card-body {
+    padding: 2rem;
+    background-color: #fff5f5;
+    border-radius: 20px;
+}
+
+.auth-card .form-control {
+    border: 2px dotted #ff69b4;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.auth-card .form-control:focus {
+    border-color: #ff1493;
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.2);
+}
+
+.auth-card .btn {
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.auth-card .btn-primary {
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    border: none;
+}
+
+.auth-card .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.2);
+}
+
+.auth-card .btn-outline-primary {
+    border: 2px solid #ff69b4;
+    background: transparent;
+    color: #ff69b4;
+}
+
+.auth-card .btn-outline-primary:hover {
+    background-color: #ff1493;
+    border-color: transparent;
+    color: white;
+}
+
+.form-check-input:checked {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+}
+
+.auth-card hr {
+    margin: 1.5rem 0;
+    opacity: 0.1;
+}
+
+.auth-card a {
+    color: #ff69b4;
+    transition: all 0.3s ease;
+}
+
+.auth-card a:hover {
+    color: #ff1493;
+    text-decoration: none;
+}

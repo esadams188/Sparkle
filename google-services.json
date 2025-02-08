@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1097340104287",
+    "firebase_url": "https://moe7data-default-rtdb.firebaseio.com",
+    "project_id": "moe7data",
+    "storage_bucket": "moe7data.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097340104287:android:687d33dab9adbb2cd735ea",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.com.unity.template.mobile2D"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097340104287-5vodrngvg5qu63k687lmpl3juuuh25dm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA007jLTt9qz5BQbTpQNvx7zclp8_0pyL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097340104287-5vodrngvg5qu63k687lmpl3juuuh25dm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

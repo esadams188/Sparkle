@@ -1,0 +1,20 @@
+{
+    "name": "sparkle-social",
+    "version": "1.0.0",
+    "description": "A playful social media web application",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx serve .",
+        "test": "echo \"No tests configured\""
+    },
+    "keywords": ["social-media", "firebase", "web-app"],
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+        "firebase": "^9.22.1",
+        "bootstrap": "^5.3.2"
+    },
+    "devDependencies": {
+        "serve": "^14.2.0"
+    }
+}
