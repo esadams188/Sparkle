@@ -1,13 +1,13 @@
 // Firebase Configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDYBtc-r5kTvxAAVRW256cu619tHtcymsI",
-    authDomain: "moe7data.firebaseapp.com",
-    databaseURL: "https://moe7data-default-rtdb.firebaseio.com",
-    projectId: "moe7data",
-    storageBucket: "moe7data.appspot.com",
-    messagingSenderId: "1097340104287",
-    appId: "1:1097340104287:web:a67074ee3f65e640d735ea",
-    measurementId: "G-WYMCVG50D4"
+  apiKey: "AIzaSyBVcIsXbAlc4RhGqSivERl_pktjk3EJNi8",
+  authDomain: "stalwartmarket-20678.firebaseapp.com",
+  databaseURL: "https://stalwartmarket-20678-default-rtdb.firebaseio.com",
+  projectId: "stalwartmarket-20678",
+  storageBucket: "stalwartmarket-20678.firebasestorage.app",
+  messagingSenderId: "481500647418",
+  appId: "1:481500647418:web:867b753dc8f39b9be15e43",
+  measurementId: "G-HKTKNMDV63"
 };
 
 // Initialize Firebase
